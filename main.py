@@ -13,6 +13,7 @@ from api.routers.championship_edition_router import router as championship_editi
 from api.routers.title_type_router import router as title_type_router
 from api.routers.stadium_router import router as stadium_router
 from api.routers.player_router import router as player_router
+from api.routers.usuario_router import router as usuario_router
 from persistence.configs.database import init_db, close_pool
 
 logging.basicConfig(
@@ -44,6 +45,7 @@ app.include_router(player_router)
 app.include_router(championship_edition_router)
 app.include_router(stadium_router)
 app.include_router(title_type_router)
+app.include_router(usuario_router)
 
 register_exception_handler(app)
 
